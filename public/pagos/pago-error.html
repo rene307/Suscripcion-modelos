@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Pago no completado | Valentina</title>
+
+  <link
+    rel="stylesheet"
+    href="../styles.css"
+  >
+
+  <style>
+    body {
+      min-height: 100vh;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 24px;
+
+      background: #0c0c0e;
+
+      color: #ffffff;
+    }
+
+
+    .payment-result {
+      width: min(
+        520px,
+        100%
+      );
+
+      padding: 42px;
+
+      text-align: center;
+
+      background: #151517;
+
+      border:
+        1px solid
+        #2c2c30;
+
+      border-radius: 22px;
+
+      box-shadow:
+        0
+        22px
+        60px
+        rgba(
+          0,
+          0,
+          0,
+          0.38
+        );
+    }
+
+
+    .payment-icon {
+      width: 72px;
+
+      height: 72px;
+
+      margin:
+        0
+        auto
+        24px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 50%;
+
+      background:
+        rgba(
+          183,
+          68,
+          68,
+          0.13
+        );
+
+      border:
+        1px solid
+        rgba(
+          183,
+          68,
+          68,
+          0.38
+        );
+
+      font-size: 2rem;
+    }
+
+
+    .payment-result h1 {
+      margin-bottom: 14px;
+
+      font-size: 2rem;
+    }
+
+
+    .payment-result p {
+      margin-bottom: 28px;
+
+      color: #aaa39a;
+
+      line-height: 1.6;
+    }
+
+
+    .payment-actions {
+      display: flex;
+
+      gap: 12px;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+    }
+
+
+    .payment-button {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      min-height: 44px;
+
+      padding:
+        0
+        22px;
+
+      border-radius: 14px;
+
+      text-decoration: none;
+
+      font-size: 0.82rem;
+
+      font-weight: 600;
+    }
+
+
+    .payment-button.primary {
+      background: #d4b06d;
+
+      color: #111111;
+    }
+
+
+    .payment-button.secondary {
+      border:
+        1px solid
+        #3a3a3f;
+
+      color: #ffffff;
+
+      background: #1c1c1f;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="payment-result">
+
+    <div class="payment-icon">
+      ×
+    </div>
+
+
+    <p
+      style="
+        color:#d4b06d;
+        letter-spacing:0.16em;
+        font-size:0.72rem;
+        margin-bottom:10px;
+      "
+    >
+      MERCADO PAGO
+    </p>
+
+
+    <h1>
+      Pago no completado
+    </h1>
+
+
+    <p>
+      La operación no pudo completarse
+      o fue cancelada.
+      Puedes intentarlo nuevamente desde tu área privada.
+    </p>
+
+
+    <div class="payment-actions">
+
+      <a
+        href="../vip.html"
+        class="payment-button primary"
+      >
+        INTENTAR NUEVAMENTE
+      </a>
+
+
+      <a
+        href="../index.html"
+        class="payment-button secondary"
+      >
+        IR AL INICIO
+      </a>
+
+    </div>
+
+  </main>
+
+</body>
+</html>

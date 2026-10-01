@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Acceso privado | Valentina</title>
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+</head>
+
+<body class="auth-shell">
+
+  <!-- ======================================================
+       LADO VISUAL
+  ======================================================= -->
+
+  <section class="auth-visual">
+
+    <a
+      class="auth-brand"
+      href="/"
+    >
+      <strong>
+        VALENTINA
+      </strong>
+
+      <small>
+        PRIVATE EXPERIENCE
+      </small>
+    </a>
+
+
+    <div class="auth-visual-copy">
+
+      <div class="eyebrow">
+        PRIVATE MEMBERS
+      </div>
+
+      <h1>
+        Tu espacio
+        <br>
+        privado.
+      </h1>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================================
+       LOGIN
+  ======================================================= -->
+
+  <section class="auth-panel">
+
+    <div class="form-card">
+
+      <div class="eyebrow">
+        ACCESO SEGURO
+      </div>
+
+      <h2>
+        Bienvenido
+      </h2>
+
+      <p>
+        Ingresa con tu cuenta autorizada.
+      </p>
+
+
+      <form id="loginForm">
+
+        <div class="form-group">
+
+          <label for="email">
+            CORREO
+          </label>
+
+          <input
+            class="input"
+            id="email"
+            type="email"
+            autocomplete="email"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="password">
+            CONTRASEÑA
+          </label>
+
+          <input
+            class="input"
+            id="password"
+            type="password"
+            autocomplete="current-password"
+            required
+          >
+
+        </div>
+
+
+        <p
+          class="form-error"
+          id="loginError"
+        ></p>
+
+
+        <div class="login-actions">
+
+          <button
+            class="btn btn-gold"
+            type="submit"
+          >
+            ENTRAR
+          </button>
+
+
+          <a
+            class="btn btn-outline"
+            href="/"
+          >
+            VOLVER
+          </a>
+
+        </div>
+
+      </form>
+
+
+      <!-- ==================================================
+           SUSCRIPCIÓN
+      =================================================== -->
+
+      <div class="login-subscription">
+
+        <div class="login-divider">
+          <span>
+            MEMBRESÍA
+          </span>
+        </div>
+
+
+        <p class="login-subscription-text">
+          ¿Quieres acceder al contenido privado?
+        </p>
+
+
+        <button
+          id="subscriptionPaymentBtn"
+          class="subscription-payment-btn"
+          type="button"
+        >
+          PAGAR SUSCRIPCIÓN
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <script src="login.js"></script>
+
+</body>
+
+</html>

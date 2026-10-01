@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Área Privada | Valentina</title>
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+</head>
+
+<body class="dashboard">
+
+  <!-- ======================================================
+       ENCABEZADO
+  ======================================================= -->
+
+  <header class="header">
+
+    <a
+      class="brand"
+      href="/"
+    >
+      <strong>VALENTINA</strong>
+
+      <small>
+        PRIVATE MEMBERS
+      </small>
+    </a>
+
+
+    <nav class="nav">
+
+      <span id="userName">
+        Cliente
+      </span>
+
+      <button
+        class="btn btn-outline"
+        id="logoutBtn"
+      >
+        SALIR
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ======================================================
+       CONTENIDO PRINCIPAL
+  ======================================================= -->
+
+  <main class="section">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="eyebrow">
+          PRIVATE MEMBERS
+        </div>
+
+        <h2>
+          Contenido privado
+        </h2>
+
+      </div>
+
+
+      <p>
+        Bienvenido a mi espacio privado.
+        Aquí podrás ver las nuevas fotografías
+        y videos publicados.
+      </p>
+
+    </div>
+
+
+    <!-- ==================================================
+         AQUÍ VIP.JS COLOCA AUTOMÁTICAMENTE
+         LAS FOTOS Y VIDEOS DEL ADMIN
+    =================================================== -->
+
+    <div
+      class="content-grid"
+      id="contentGrid"
+    >
+    </div>
+
+
+    <!-- ==================================================
+         MENSAJE CUANDO TODAVÍA NO HAY CONTENIDO
+    =================================================== -->
+
+    <div
+      id="emptyContent"
+      class="panel hidden"
+    >
+
+      <div class="eyebrow">
+        PRIVATE CONTENT
+      </div>
+
+      <h3>
+        Próximamente
+      </h3>
+
+      <p style="color: var(--muted);">
+        Todavía no hay publicaciones disponibles.
+      </p>
+
+    </div>
+
+
+    <!-- ==================================================
+         CHAT PRIVADO
+    =================================================== -->
+
+    <section
+      class="panel"
+      style="margin-top: 40px;"
+    >
+
+      <div class="eyebrow">
+        MENSAJES
+      </div>
+
+      <h3>
+        Chat privado
+      </h3>
+
+      <p
+        style="
+          color: var(--muted);
+          margin-bottom: 20px;
+        "
+      >
+        Puedes enviar un mensaje privado
+        directamente desde aquí.
+      </p>
+
+
+      <div class="chat-box chat-modern vip-chat-box">
+
+        <div class="chat-header">
+          <div>
+            <strong>Valentina</strong>
+            <span>Chat privado</span>
+          </div>
+        </div>
+
+        <!-- MENSAJES -->
+        <div class="messages" id="messages"></div>
+
+        <!-- ESCRIBIR MENSAJE -->
+        <form class="chat-compose" id="chatForm">
+
+          <div class="chat-tools" aria-label="Herramientas del chat">
+            <button class="chat-icon-btn" id="emojiBtn" type="button" title="Emoticones" aria-label="Emoticones">☺</button>
+            <button class="chat-icon-btn" id="photoBtn" type="button" title="Enviar foto" aria-label="Enviar foto">📷</button>
+            <input id="imageInput" class="chat-file-input" type="file" accept="image/jpeg,image/png,image/webp">
+            <button class="chat-icon-btn" id="audioBtn" type="button" title="Grabar audio" aria-label="Grabar audio">🎤</button>
+          </div>
+
+          <input
+            class="input chat-message-input"
+            id="messageInput"
+            type="text"
+            placeholder="Escribe un mensaje..."
+            autocomplete="off"
+          >
+
+          <button class="btn btn-gold chat-send-btn" type="submit">
+            ENVIAR
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ======================================================
+       PIE DE PÁGINA
+  ======================================================= -->
+
+  <footer class="footer">
+
+    <div>
+      VALENTINA · PRIVATE EXPERIENCE
+    </div>
+
+    <div>
+      Área privada para usuarios autorizados.
+    </div>
+
+  </footer>
+
+
+  <!-- SOCKET.IO -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- TU JS ACTUAL -->
+  <script src="vip.js"></script>
+
+</body>
+</html>

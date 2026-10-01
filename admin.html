@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Administración | Valentina</title><link rel="stylesheet" href="styles.css"></head><body><header class="header"><a class="brand" href="/"><strong>VALENTINA</strong><small>ADMINISTRATION</small></a><nav class="nav"><span id="adminName"></span><button class="btn btn-outline" id="logoutBtn">Salir</button></nav></header><div class="dashboard-wrap"><aside class="sidebar"><h3>Panel privado</h3><div class="side-nav"><button class="active" data-view="content">Contenido</button><button data-view="users">Clientes</button><button data-view="chat">Chat</button></div></aside><main class="main-panel">
+<section id="view-content"><div class="topline"><div><div class="eyebrow">ADMIN</div><h1 class="page-title">Contenido</h1></div></div><div class="stats"><div class="stat"><small>CONTENIDO</small><strong id="contentCount">0</strong></div><div class="stat"><small>CLIENTES</small><strong id="userCount">0</strong></div><div class="stat"><small>ESTADO</small><strong>Online</strong></div></div><section class="panel"><h3>Subir foto o video</h3><form id="uploadForm"><div class="upload-row"><div class="form-group"><label>Título</label><input class="input" name="titulo" required></div><div class="form-group"><label>Archivo</label><input class="input" type="file" name="archivo" accept="image/jpeg,image/png,image/webp,video/mp4,video/webm" required></div></div><div class="form-group"><label>Descripción</label><textarea class="input" name="descripcion"></textarea></div><button class="btn btn-gold">Publicar contenido</button></form></section><div class="content-grid" id="adminContentGrid"></div></section>
+<section id="view-users" class="hidden"><div class="topline"><div><div class="eyebrow">ADMIN</div><h1 class="page-title">Clientes</h1></div></div><section class="panel"><h3>Crear acceso</h3><form id="createUserForm"><div class="upload-row"><div class="form-group"><label>Nombre</label><input class="input" name="nombre" required></div><div class="form-group"><label>Correo</label><input class="input" type="email" name="email" required></div><div class="form-group"><label>Contraseña inicial</label><input class="input" type="password" name="password" required></div><div class="form-group"><label>Acceso hasta</label><input class="input" type="datetime-local" name="acceso_hasta"></div></div><button class="btn btn-gold">Crear usuario</button></form></section><section class="panel"><h3>Usuarios</h3><div class="table-wrap"><table><thead><tr><th>Nombre</th><th>Correo</th><th>Rol</th><th>Acceso</th><th>Estado</th><th></th></tr></thead><tbody id="usersTable"></tbody></table></div></section></section>
+<section id="view-chat" class="hidden">
+  <div class="topline">
+    <div>
+      <div class="eyebrow">ADMIN</div>
+      <h1 class="page-title">Mensajes</h1>
+    </div>
+  </div>
+
+  <div class="chat-layout chat-modern">
+    <aside class="chat-users" id="chatUsers"></aside>
+
+    <section class="chat-box">
+      <div class="chat-header">
+        <div>
+          <strong id="adminChatTitle">Chat privado</strong>
+          <span>Conversación con cliente VIP</span>
+        </div>
+      </div>
+
+      <div class="messages" id="adminMessages">
+        <p class="chat-empty">Selecciona un cliente.</p>
+      </div>
+
+      <form class="chat-compose" id="adminChatForm">
+        <div class="chat-tools" aria-label="Herramientas del chat">
+          <button class="chat-icon-btn" id="adminEmojiBtn" type="button" title="Emoticones" aria-label="Emoticones">☺</button>
+          <button class="chat-icon-btn" id="adminPhotoBtn" type="button" title="Enviar foto" aria-label="Enviar foto">📷</button>
+          <input id="adminImageInput" class="chat-file-input" type="file" accept="image/jpeg,image/png,image/webp">
+          <button class="chat-icon-btn" id="adminAudioBtn" type="button" title="Grabar audio" aria-label="Grabar audio">🎤</button>
+        </div>
+
+        <input class="input chat-message-input" id="adminMessageInput" placeholder="Escribe un mensaje..." autocomplete="off">
+
+        <button class="btn btn-gold chat-send-btn" type="submit">Enviar</button>
+      </form>
+    </section>
+  </div>
+</section>
+</main></div><script src="/socket.io/socket.io.js"></script><script src="admin.js"></script></body></html>
